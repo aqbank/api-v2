@@ -1,5 +1,6 @@
 {
     "name": "aqbank/aqpago-sdk-api-v2",
+    "version": "0.2.3",
     "description": "SDK for PHP with AQBank",
     "type": "library",
     "require": {
