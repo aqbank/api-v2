@@ -87,7 +87,7 @@ abstract class AbstractRequest
         if($this->token) {
             $headers = [
                 'Accept: application/json',
-                'Accept-Encoding: gzip',
+                //'Accept-Encoding: gzip',
                 'Authorization: Bearer ' . $this->token,
                 'User-Agent: ' . $this->seller->getUserAgent(),
                 'Seller-document: ' . $this->seller->getDocument(),
@@ -99,7 +99,7 @@ abstract class AbstractRequest
         else {
             $headers = [
                 'Accept: application/json',
-                'Accept-Encoding: gzip',
+                //'Accept-Encoding: gzip',
                 'User-Agent: ' . $this->seller->getUserAgent(),
                 'Seller-document: ' . $this->seller->getDocument(),
                 'Seller-token: ' . $this->seller->getToken(),
