@@ -35,6 +35,8 @@ class CreditCard implements \JsonSerializable, AqpagoSerializable
 
     private $cpf;
 
+    private $document;
+
     private $flag;
 
     private $first4_digits;
@@ -82,6 +84,7 @@ class CreditCard implements \JsonSerializable, AqpagoSerializable
         $this->expiration_year  = isset($data->expiration_year) ? $data->expiration_year : false;
         $this->security_code    = isset($data->security_code) ? $data->security_code : null;
         $this->cpf              = isset($data->cpf) ? $data->cpf : null;
+        $this->document         = isset($data->document) ? $data->document : null;
         $this->flag             = isset($data->flag) ? $data->flag : null;
         $this->first4_digits    = isset($data->first4_digits) ? $data->first4_digits : null;
         $this->last4_digits     = isset($data->last4_digits) ? $data->last4_digits : null;
@@ -257,6 +260,26 @@ class CreditCard implements \JsonSerializable, AqpagoSerializable
     public function setCpf($cpf)
     {
         $this->cpf = $cpf;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDocument()
+    {
+        return $this->document;
+    }
+
+    /**
+     * @param $document
+     *
+     * @return $this
+     */
+    public function setDocument($document)
+    {
+        $this->document = $document;
 
         return $this;
     }
